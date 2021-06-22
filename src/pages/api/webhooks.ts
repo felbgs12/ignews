@@ -46,7 +46,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const type = event.type;
 
     if (relevantEvents.has(type)) {
-      console.log('Evento recebido ', event);
       try {
         switch (type) {
           case 'customer.subscription.updated':
